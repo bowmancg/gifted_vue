@@ -10,6 +10,12 @@ class GiftsService {
         logger.log('[GIFTS]', res.data)
         AppState.gifts = res.data.map(g => new Gift(g))
     }
+
+    async getGiftById(giftId) {
+        const res = await giftApi.get(`api/gifts/${giftId}`)
+        logger.log('[GET BY ID]', res.data)
+        AppState.activeGift = new Gift(res.data)
+    }
 }
 
 export const giftsService = new GiftsService()

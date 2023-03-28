@@ -10,5 +10,6 @@ export const AppState = reactive({
   gifts: [],
 
   /**@type {import('.models/Gift.js').Gift|null} */
+  activeGift: null,
   query: null
 })
