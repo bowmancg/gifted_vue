@@ -6,8 +6,11 @@
           <SearchBar/>
         </div>
       
-        <div v-for="giftFromVFor in gifts" class="col-3 m-2 p-3 card border border-primary-subtle ">
-          <GiftCard :giftProp="giftFromVFor"/>
+        <div class="col-3">
+
+          <div v-for="giftFromVFor in gifts" :gift="giftFromVFor" :key="giftFromVFor.id" class="m-2 p-3 card border border-primary-subtle ">
+            <GiftCard :giftProp="giftFromVFor"/>
+          </div>
         </div>
     </div>
   </div>

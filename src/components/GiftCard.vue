@@ -17,6 +17,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+.gift-card{
+    cursor: pointer;
+
+    &:hover{
+
+        transform: scale(0.8);
+    }
+}
 
 </style>
